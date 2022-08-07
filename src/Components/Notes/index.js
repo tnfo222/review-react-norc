@@ -15,6 +15,7 @@ export default function Notes() {
           <Col sm={6} style={{ marginTop: 20 }}>
             <Note
               key={index}
+              id={id}
               title={title}
               description={description}
               createdAt={createdAt}

@@ -4,7 +4,9 @@ import { useContext } from "react";
 import { NotesContext } from "../../../Context/NoteContext";
 export default function Note({ title, description, createdAt, priority }) {
   const { setisDetailShowed, isDetailShowed } = useContext(NotesContext);
-  function handleModalOpen() {
+  function handleModalOpen(e) {
+    currentNote = notes.filter((note) => note.id === parseInt(e.target.id));
+    setCurrentNote(currentNote[0])
     setisDetailShowed(true);
   }
   return (
